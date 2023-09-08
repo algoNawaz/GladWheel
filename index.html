@@ -15,6 +15,15 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+  
+
+
     <title>GladWheel</title>
   </head>
   <body>
@@ -64,94 +73,83 @@
           <cite>team gladwheel</cite>
         </aside>
       </div>
-      <div class="carousel">
-        <div class="carousel-content-container">
-          <button class="carousel-arrow arrow-left">
-            <iconify-icon icon="mingcute:left-fill"></iconify-icon>
-          </button>
-          <div class="carousel-content-wrapper">
-            <div>
-              <div class="content">
-                <img src="https://source.unsplash.com/101x101/?random" alt="">
-                <h2>A Random Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
-              </div>
-      
+
+      <div class="customer-review swiper">
+        <div class="content swiper-wrapper">
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <img src="rio_firefly_2.5_side_gry_1_768x768.png" alt="">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, architecto.</div>
+                    <div class="name">sameer</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
             </div>
-            <div>
-              <div class="content">
-                <img src="https://source.unsplash.com/102x102/?random" alt="">
-                <h2>A Random Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
-              </div>
-      
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <img src="rio_firefly_2.5_side_gry_1_768x768.png" alt="">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, architecto.</div>
+                    <div class="name">Yusuf</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
             </div>
-            <div>
-              <div class="content">
-                <img src="https://source.unsplash.com/103x103/?random" alt="">
-                <h2>A Random Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
-              </div>
-      
+            <div class="swiper-slide card">
+                <div class="card-content">
+                    <img src="rio_firefly_2.5_side_gry_1_768x768.png" alt="">
+                    <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, architecto.</div>
+                    <div class="name">Yusuf</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
             </div>
-            <div>
-              <div class="content">
-                <img src="https://source.unsplash.com/104x104/?random" alt="">
-                <h2>A Random Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
-              </div>
-      
-            </div>
-            <div>
-              <div class="content">
-                <img src="https://source.unsplash.com/105x105/?random" alt="">
-                <h2>A Random Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
-              </div>
-      
-            </div>
-            <div>
-              <div class="content">
-                <img src="https://source.unsplash.com/105x105/?random" alt="">
-                <h2>A Random Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
-              </div>
-      
-            </div>
-            <div>
-              <div class="content">
-                <img src="https://source.unsplash.com/105x105/?random" alt="">
-                <h2>A Random Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
-              </div>
-      
-            </div>
-            <div>
-              <div class="content">
-                <img src="https://source.unsplash.com/105x105/?random" alt="">
-                <h2>A Random Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
-              </div>
-      
-            </div>
-            <div>
-              <div class="content">
-                <img src="https://source.unsplash.com/105x105/?random" alt="">
-                <h2>A Random Header</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, dolores.</p>
-              </div>
-      
-            </div>
-          </div>
-      
-          <button class="carousel-arrow arrow-right">
-            <iconify-icon icon="mingcute:right-fill"></iconify-icon>
-          </button>
-      
         </div>
-        <div class="carousel-buttons"></div>
+
+        <!-- <div class="swiper-pagination"></div> -->
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <div class="swiper-scrollbar"></div>
+
       </div>
+
     </div>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        });
+    </script>
   </body>
 </html>
