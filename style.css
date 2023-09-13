@@ -5,6 +5,8 @@
 
 * {
   font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding:0;
 }
 
 body {
@@ -111,3 +113,54 @@ aside {
   width: 100%;
   height: 300px;
 }
+
+
+.product-feature{
+  background-color: antiquewhite;
+  padding:2rem 0rem;
+  display: flex;
+  justify-content: space-around;
+}
+.feature-box{
+  min-width:10rem;
+  width:20rem;
+  min-height: 20rem;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:2rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+
+.feature-box:hover{
+  transform: translateY(-2%);
+}
+
+.feature-box *{
+  text-align: center;
+}
+
+.feature-box>.img>img{
+  width:100%;
+  display: block;
+  object-fit: cover;
+}
+
+
+.feature-box>.know-more-btn>button{
+  padding:0.5rem 0.75rem;
+  background-color: black;
+  color:white;
+  border-radius: 5px;
+  border:none;
+  outline: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+
+
