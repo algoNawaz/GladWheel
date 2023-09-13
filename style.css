@@ -74,7 +74,7 @@ nav {
   padding: 20px;
 }
 
-aside {
+/* aside {
   width: 40%;
   padding-left: 15px;
   margin-left: 15px;
@@ -82,7 +82,22 @@ aside {
   font-style: italic;
   background-color: var(--bg-l-col);
   border-radius: 0.25rem;
+} */
+
+aside {
+  width: 40%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #29627e;
 }
+
+aside > p {
+  margin: 0.5rem;
+}
+
 
 .section {
   display: flex;
@@ -92,8 +107,6 @@ aside {
 .section img {
   max-width: var(--big-img-size);
 }
-
-
 
 .card img{
   width:140px;
@@ -114,6 +127,7 @@ aside {
   height: 300px;
 }
 
+<<<<<<< HEAD
 
 .product-feature{
   background-color: antiquewhite;
@@ -164,3 +178,5 @@ aside {
 
 
 
+=======
+>>>>>>> 93fd6b34882b10358373f6483634e8337a2f460c
