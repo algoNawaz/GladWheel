@@ -127,7 +127,6 @@ aside > p {
   height: 300px;
 }
 
-<<<<<<< HEAD
 
 .product-feature{
   background-color: antiquewhite;
@@ -175,8 +174,23 @@ aside > p {
   cursor: pointer;
 }
 
+/* footer */
+footer {
+  background-color: rgb(71, 66, 66);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
 
+.footer-section {
+  flex: 1;
+  padding: 20px;
+  max-width: 300px;
+  text-align: left;
+}
+/* footer */
 
-
-=======
->>>>>>> 93fd6b34882b10358373f6483634e8337a2f460c
