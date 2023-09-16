@@ -32,21 +32,25 @@
   </head>
   <body>
     <nav>
-      <div class="container">
+      <div class="container" >
         <div class="logo">
           <img src="/WhatsApp Image 2023-09-08 at 15.54.36.jpg" alt="LOGO" />
         </div>
         <ul class="nav-links">
+          <i class="fa-solid fa-xmark nav-menu-close-btn" ></i>
           <!--  ancher is for navigating different section of the page for later use-->
-          <li><a href="#">Home</a></li>
-          <li><a href="#">FAQ</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#">Booking</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="nav-menu-btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </div>
     </nav>
 
-    <div class="main">
+    <div class="main" id="home">
       <div class="product-section">
         <div class="title">
           <div class="words">
@@ -60,7 +64,7 @@
         </div>
       </div>
 
-      <div class="product-feature">
+      <!-- <div class="product-feature">
         <div class="feature-box" id="feature1">
           <div class="img">
             <img src="./FF_2.5_Handlebar_768x768.webp" alt="" />
@@ -115,7 +119,7 @@
             <button>know more</button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="customer-review swiper">
         <div class="content swiper-wrapper">
@@ -174,7 +178,7 @@
 
 
 
-      <div class="faq-section">
+      <div class="faq-section" id="faq">
         <h2>FAQ</h2>
         <div class="ques">
           <li>
@@ -211,7 +215,7 @@
 
  
 
-    <footer>
+    <footer id="contact">
       <div class="footer-upward-section">
         <div class="logo">
           <img src="WhatsApp Image 2023-09-08 at 15.54.36.jpg" alt="">
@@ -281,7 +285,7 @@
         else{
           index++;
         }
-        setTimeout(animateText,2000);
+        setTimeout(animateText,6000);
       }
 
       window.addEventListener('load',()=>{
@@ -298,6 +302,31 @@
         })
       })
 
+
+      //nav-menu-btn handler
+      
+      const menuBtn=document.querySelector('.nav-menu-btn');
+      if(menuBtn){
+        menuBtn.addEventListener('click',()=>{
+          const element=menuBtn.previousElementSibling;
+          const style=window.getComputedStyle(element);
+          
+          if(style.display==='none'){
+            element.style.display='flex';
+          }
+          else if(style.display==='block' || style.display==='inline-block' || style.display==='inline' || style.display==='flex'){
+            element.style.display='none';
+          }
+        })
+      }
+      const menuCloseBtn=document.querySelector('.nav-menu-close-btn');
+      menuCloseBtn.addEventListener('click',()=>{
+        const element=menuCloseBtn.parentElement;
+        const style=window.getComputedStyle(element);
+          if(style.display==='block' || style.display==='inline-block' || style.display==='inline' || style.display==='flex' || style.display==='grid'){
+            element.style.display='none';
+          }
+      })
 
     </script>
   </body>

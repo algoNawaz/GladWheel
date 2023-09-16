@@ -9,6 +9,10 @@
   padding:0;
 }
 
+html{
+  scroll-behavior: smooth;
+  
+}
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -38,7 +42,7 @@ nav {
 
 .main{
   width:90%;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 .container {
@@ -65,7 +69,9 @@ nav {
   padding: 0;
   display: flex;
 }
-
+.nav-menu-close-btn{
+  display: none;
+}
 .nav-links a {
   border-bottom: 2px solid transparent;
   transition: all 0.5s;
@@ -79,6 +85,10 @@ nav {
 
 .nav-links li {
   margin: 0 10px;
+}
+
+.nav-menu-btn{
+  display: none;
 }
 
 .content {
@@ -98,7 +108,7 @@ nav {
 .main-product-img>img{
   display: block;
   height:100%;
-  object-fit: cover;
+  object-fit: contain;
   margin-left: auto;
   transform: scaleX(-1)
 }
@@ -107,6 +117,7 @@ nav {
   width:30%;
   position: absolute;
   top:30%;
+  z-index: 10;
 }
 .words{
   width:100%;
@@ -140,29 +151,6 @@ nav {
 }
   
 }
-/* aside {
-  width: 40%;
-  padding-left: 0.5rem;
-  margin-left: 0.5rem;
-  float: right;
-  box-shadow: inset 5px 0 5px -5px #29627e;
-  font-style: italic;
-  color: #29627e;
-} */
-
-/* aside > p {
-  margin: 0.5rem;
-} */
-
-
-/* .section {
-  display: flex;
-  justify-content: space-between;
-}
-
-.section img {
-  max-width: var(--big-img-size);
-} */
 
 .card img{
   width:140px;
@@ -182,7 +170,9 @@ nav {
   width: 80%;
   height: 300px;
 }
-
+.swiper-button-prev {
+  color:black;
+}
 
 .product-feature{
   background-color: antiquewhite;
@@ -287,15 +277,17 @@ footer{
 
 
 .faq-section{
-  width:100%;
-  height:fit-content;
+  min-width:50%;
+  max-width: 70%;
+  margin: 2rem auto;
 }
 
 .faq-section>.ques li{
   list-style: none;
-  line-height: 3rem;
-  padding-left:1rem;
   cursor: pointer;
+}
+.faq-section>.ques li:first-child{
+  min-height: 3rem;
 }
 
 .faq-section>.ques>li:first-child{
@@ -311,8 +303,8 @@ footer{
 
 .faq-section>.ques>li:nth-child(2){
   opacity:0%;
-  line-height:0px;
   transition: all 0.2s;
+  line-height: 0px;
 }
 
 
@@ -326,6 +318,151 @@ footer{
 
 .show{
   opacity:100% !important;
-  line-height: 3rem !important;
+  line-height: 2rem !important;
   border-bottom: 1px solid gray;
+}
+
+
+@media (max-width:1100px) {
+
+  .main-product-img > img{
+      height: 90%;
+  }
+ 
+  .title>.words>span{
+    font-size:3rem;
+  }
+  footer{
+    padding:0 8rem;
+  }
+  .footer-upward-section>.logo>img{
+    display: block;
+    width: 8rem;
+  }
+}
+
+@media (max-width:920px) {
+  
+  .main-product-img > img{
+    height: 70%;
+  }
+
+  .title>.words>span{
+    font-size:2.5rem;
+  }
+  footer{
+    padding:0 6rem;
+  }
+  .footer-upward-section p{
+    font-size: 0.75rem;
+  }
+  .footer-downward-section p{
+    font-size: 0.75rem;
+  }
+  .footer-upward-section>.contact-us>p:not(:first-of-type){
+    font-weight: bolder;
+    line-height: 1.25rem;
+    letter-spacing: 0.15ch;
+  }
+}
+
+
+@media  (max-width:780px) {
+  .main{
+    width: 95%;
+  }
+  .main-product-img > img{
+    height: 60%;
+  }
+  .title{
+    padding-left:1rem;
+  }
+  .title>.words>span{
+    font-size:2.5rem;
+  }
+}
+
+@media (max-width:650px) {
+    .title{
+      width:min-content;
+      top:10%;
+    }
+    .main-product-img > img{
+      width: 100%;
+      height: 80%;
+      object-fit: contain;
+    }
+    footer{
+      padding:0 1.25rem;
+    }
+    .footer-upward-section p{
+      font-size: 0.75rem;
+    }
+    .footer-downward-section p{
+      font-size: 0.75rem;
+    }
+    .footer-upward-section>.contact-us>p:not(:first-of-type){
+      font-weight: bolder;
+      line-height: 1.25rem;
+      letter-spacing: 0.15ch;
+    }
+}
+
+@media (max-width:550px) {
+
+  .nav-links{
+    display:none;
+    width:100%;  
+    height:max-content;
+    position: absolute;
+    top:0;
+    left:0;
+    background-color: black;
+    flex-direction: column;
+    
+  }
+  .nav-menu-close-btn{
+    display: block;
+    position: absolute;
+    top:1rem;
+    right:1rem;
+    color:white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .nav-links> li {
+    margin: 1rem 1rem;
+  }
+  .nav-menu-btn{
+    display: block;
+    color:#f9c10f;
+    font-size:2rem;
+    cursor: pointer;
+  }
+  .footer-upward-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 1rem;
+  }
+
+  .footer-upward-section>.logo{
+    display: grid;
+    
+    grid-row-end: 3;
+  }
+
+  .footer-upward-section>.follow-btn>.icons{
+    width:fit-content;
+  }
+  .footer-upward-section>.follow-btn>.icons i{
+    margin-right:1rem;
+  }
+  .footer-upward-section>.contact-us{
+    grid-column-start: 2;
+  }
+  .footer-downward-section{
+    padding:1rem 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
