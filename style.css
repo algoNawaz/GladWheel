@@ -52,7 +52,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  /* overflow: hidden; */
 }
 
 .logo {
@@ -97,7 +96,7 @@ nav {
 
 .product-section{
   width:100%;
-  height: 100vh;
+  height: 90vh;
   position: relative;
 }
 
@@ -175,49 +174,35 @@ nav {
 }
 
 .product-feature{
-  background-color: antiquewhite;
-  padding:2rem 0rem;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
-}
-.feature-box{
-  min-width:10rem;
-  width:20rem;
-  min-height: 20rem;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  padding:2rem 1rem;
-  border-radius: 0.5rem;
-  transition: all 0.25s;
-  cursor: pointer;
-}
-
-.feature-box:hover{
-  transform: translateY(-2%);
-}
-
-.feature-box *{
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  margin-bottom: 5rem;
+}
+.product-feature .heading{
+  width:70%;
 }
 
-.feature-box>.img>img{
-  width:100%;
-  display: block;
-  object-fit: cover;
+.product-feature h1{
+  font-size: 3rem;
+  font-weight: bolder;
+  line-height: 4rem;
+  margin-bottom: 3rem;
 }
 
 
-.feature-box>.know-more-btn>button{
-  padding:0.5rem 0.75rem;
-  background-color: black;
-  color:white;
-  border-radius: 5px;
-  border:none;
-  outline: transparent;
-  font-size: 1rem;
-  cursor: pointer;
+.product-feature p{
+  font-size: 1.5rem;
+  
+}
+
+.product-feature>.product-image>img{
+    display: block;
+    width:35rem;
+    margin: 0 auto;
 }
 
 footer{
@@ -380,6 +365,30 @@ footer{
   .title>.words>span{
     font-size:2.5rem;
   }
+
+
+  .product-feature .heading{
+    width:80%;
+  }
+  
+  .product-feature h1{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .product-feature .description{
+    width:90%;
+  }
+  .product-feature p{
+    font-size: 1.25rem;
+    
+  }
+  
+  .product-feature>.product-image>img{
+      width:30rem;
+  }
 }
 
 @media (max-width:650px) {
@@ -389,7 +398,7 @@ footer{
     }
     .main-product-img > img{
       width: 100%;
-      height: 80%;
+      height: 90%;
       object-fit: contain;
     }
     footer{
@@ -464,5 +473,27 @@ footer{
     padding:1rem 0;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .product-feature .heading{
+    width:80%;
+  }
+  
+  .product-feature h1{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .product-feature .description{
+    width:90%;
+  }
+  .product-feature p{
+    font-size: 1.25rem;
+    
+  }
+  .product-feature>.product-image>img{
+      width:25rem;
   }
 }
