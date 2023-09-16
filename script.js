@@ -1,5 +1,6 @@
 const carousel = document.querySelector(".carousel");
 
+
 function setupCarousel() {
   const contents = Object.values(
     carousel.querySelector(".carousel-content-wrapper").children
