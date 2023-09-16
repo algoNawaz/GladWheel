@@ -166,14 +166,50 @@
           </div>
         </div>
 
-        <!-- <div class="swiper-pagination"></div> -->
-
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
 
         <div class="swiper-scrollbar"></div>
       </div>
+
+
+
+      <div class="faq-section">
+        <h2>FAQ</h2>
+        <div class="ques">
+          <li>
+            <span>Lorem ipsum dolor sit amet.</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </li>
+          <li>answer</li>
+        </div>
+        <div class="ques">
+          <li>
+            <span>Lorem ipsum dolor sit amet.</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </li>
+          <li>answer</li>
+        </div>
+        <div class="ques">
+          <li>
+            <span>Lorem ipsum dolor sit amet.</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </li>
+          <li>answer</li>
+        </div>
+        <div class="ques">
+          <li>
+            <span>Lorem ipsum dolor sit amet.</span>
+            <i class="fa-solid fa-angle-down"></i>
+          </li>
+          <li>answer</li>
+        </div>
+      </div>
+
+
     </div>
+
+ 
 
     <footer>
       <div class="footer-upward-section">
@@ -251,6 +287,18 @@
       window.addEventListener('load',()=>{
         animateText()
       })
+
+      //faq section animation
+      const faqs=document.querySelectorAll('.faq-section .ques');
+      faqs.forEach((faq)=>{
+        faq.addEventListener('click',()=>{
+          console.log(faq.children[1]);
+          faq.children[0].classList.toggle('expand')
+          faq.children[1].classList.toggle('show');
+        })
+      })
+
+
     </script>
   </body>
 </html>

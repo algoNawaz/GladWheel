@@ -286,5 +286,46 @@ footer{
 }
 
 
+.faq-section{
+  width:100%;
+  height:fit-content;
+}
+
+.faq-section>.ques li{
+  list-style: none;
+  line-height: 3rem;
+  padding-left:1rem;
+  cursor: pointer;
+}
+
+.faq-section>.ques>li:first-child{
+  display: flex;
+  align-items:center;
+  border-bottom: 1px solid gray;
+}
+
+.faq-section>.ques>li:first-child>i{
+  transition: all 0.5s;
+  margin-left:1rem;
+}
+
+.faq-section>.ques>li:nth-child(2){
+  opacity:0%;
+  line-height:0px;
+  transition: all 0.2s;
+}
 
 
+.expand i{
+  transform: rotate(-180deg);
+}
+.expand{
+  border-bottom: none !important;
+}
+
+
+.show{
+  opacity:100% !important;
+  line-height: 3rem !important;
+  border-bottom: 1px solid gray;
+}
