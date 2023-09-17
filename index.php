@@ -141,49 +141,96 @@
 
 
     <?php
-      if(isset($_POST['merchantId']) && isset($_POST['transactionId']) && isset($_POST['amound'])){
+          function checkPaymentStatus($transactionId){
+          
+                $checksum2=hash("sha256","/pg/v1/status/".$merchantId."/".$merchantTransactionId.$saltKey)."###".$saltIndex;
+  
+                curl_setopt_array($curl, [
+                CURLOPT_URL => "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/".$merchantId."/".$merchantTransactionId,
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_ENCODING => "",
+                CURLOPT_MAXREDIRS => 10,
+                CURLOPT_TIMEOUT => 30,
+                CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+                CURLOPT_CUSTOMREQUEST => "GET",
+                CURLOPT_HTTPHEADER => [
+                    "Content-Type: application/json",
+                    "X-VERIFY:".$checksum2,
+                    "X-MERCHANT-ID:".$merchantId,
+                    "accept: application/json"
+                ],
+                ]);
+  
+                $response = curl_exec($curl);
+                $err = curl_error($curl);
+  
+                curl_close($curl);
+  
+                if ($err) {
+                    echo "<div class='formError'> ".$err." <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
+                } 
+                else {
+                    $data=json_decode($response);
+                    return $data->code;
+                }
+          }
+      if(isset($_POST['merchantId']) && isset($_POST['transactionId']) ){
         //check for the real-time status of the payment
+        $paymentStatus=checkPaymentStatus($_POST['transactionId']);
+        if($paymentStatus==='PAYMENT_SUCCESS'){
+          $sql="insert into buyers (name,email,phone,state,city,address,pincode,transactionId)";
+          $statement=$mysqli->prepare($sql);
+          $statement->bind_param("ssssssss",$name,$email,$phone,$state,$city,$address,$pincode,$transactionId);
+          $result=$statement->execute();
+          return echo "<div class='formError'> Payment Successfully Received <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
+        }
 
-        $checksum2=hash("sha256","/pg/v1/status/".$merchantId."/".$merchantTransactionId.$saltKey)."###".$saltIndex;
 
-        curl_setopt_array($curl, [
-        CURLOPT_URL => "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/".$merchantId."/".$merchantTransactionId,
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 30,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
-        CURLOPT_HTTPHEADER => [
-            "Content-Type: application/json",
-            "X-VERIFY:".$checksum2,
-            "X-MERCHANT-ID:".$merchantId,
-            "accept: application/json"
-        ],
-        ]);
+        else if($paymentStatus==='PAYMENT_PENDING'){
+            $initialInterval = 20;
+            $totalTimeout = 900; 
 
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
+            $endTime = time() + $totalTimeout;
 
-        curl_close($curl);
+            while (time() < $endTime) {
+      
+                if ($paymentStatus !== "PAYMENT_PENDING") {
+                    break;
+                }
 
-        if ($err) {
-            echo "<div class='formError'> ".$err." <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
-        } else {
-            $data=json_decode($response);
-            if($data->code==='PAYMENT_SUCCESS'){
-
-                $sql="insert into buyers (name,email,phone,state,city,address,pincode,transactionId)";
-                $statement=$mysqli->prepare($sql);
-                $statement->bind_param("ssssssss",$name,$email,$phone,$state,$city,$address,$pincode,$transactionId);
-                $result=$statement->execute();
-
-                echo "<div class='formError'> ".$data->data->responseCodeDescription." <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
-
-            } 
-            else if($data->success===false){
-              echo "<div class='formError'> ".$data->data->responseCodeDescription." <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
+                if (time() - $initialInterval <= 25) {
+                    $paymentStatus=checkPaymentStatus($_POST['transactionId']);
+                    sleep(3);
+                } elseif (time() - $initialInterval <= 85) {
+                   $paymentStatus=checkPaymentStatus($_POST['transactionId']);
+                    sleep(3);
+                } elseif (time() - $initialInterval <= 145) {
+                    $paymentStatus=checkPaymentStatus($_POST['transactionId']);
+                    sleep(6);
+                } elseif (time() - $initialInterval <= 205) {
+                    $paymentStatus=checkPaymentStatus($_POST['transactionId']);
+                    sleep(10);
+                } else {
+                    $paymentStatus=checkPaymentStatus($_POST['transactionId']);
+                    sleep(30);
+                }
             }
+
+            
+            if($paymentStatus==='PAYMENT_SUCCESS'){
+              $sql="insert into buyers (name,email,phone,state,city,address,pincode,transactionId)";
+              $statement=$mysqli->prepare($sql);
+              $statement->bind_param("ssssssss",$name,$email,$phone,$state,$city,$address,$pincode,$transactionId);
+              $result=$statement->execute();
+              return echo "<div class='formError'> Payment Successfully Received <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
+            }
+            else{
+              return echo "<div class='formError'> ".$data->data->responseCodeDescription." if the amount has been debited it will be credited into you account within 2 or 3 days <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
+            }
+        }
+
+        else{
+          return echo "<div class='formError'> ".$data->data->responseCodeDescription." <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
         }
       }
     ?>
