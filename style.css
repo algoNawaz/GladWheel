@@ -224,6 +224,7 @@ nav {
   flex-wrap: wrap;
   padding: 2rem;
   background-color: antiquewhite;
+  gap: 1rem;
 }
 .profile-card{
   display: flex;
@@ -234,6 +235,7 @@ nav {
   border-radius: 1rem;
   padding: 1rem;
   background-color: #fff;
+  
 
 }
 .profile-card>img{
@@ -474,6 +476,14 @@ footer{
     flex-direction: column;
     
   }
+
+  /* media query for team section  */
+  @media (max-width:480px){
+    .team-section{
+      justify-content: center;
+    }
+  }
+  
   .nav-menu-close-btn{
     display: block;
     position: absolute;
