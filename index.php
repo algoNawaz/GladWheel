@@ -215,6 +215,38 @@
           </div>
         </div>
     
+        <!-- team section -->
+      <div class="team">
+        <h1>OUR TEAM</h1>
+        <div class="team-section">
+          <div class="profile-card">
+            <img src="taha.jpg" alt="">
+            <h4>Taha Nafis</h4>
+          <p>i love technology and people related to it.</p>
+        </div>
+        <div class="profile-card">
+          <img src="maqool.jpg" alt="">
+          <h4>Taha Nafis</h4>
+          <p>i love technology and people related to it.</p>
+        </div>
+        <div class="profile-card">
+          <img src="taha.jpg" alt="">
+          <h4>Taha Nafis</h4>
+          <p>i love technology and people related to it.</p>
+        </div>
+        <div class="profile-card">
+          <img src="maqool.jpg" alt="">
+          <h4>Taha Nafis</h4>
+          <p>i love technology and people related to it.</p>
+        </div>
+        <div class="profile-card">
+          <img src="taha.jpg" alt="">
+          <h4>Taha Nafis</h4>
+          <p>i love technology and people related to it.</p>
+        </div>
+
+      </div>
+    </div>
 
         <div class="customer-review swiper">
           <div class="content swiper-wrapper">
