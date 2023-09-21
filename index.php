@@ -1,20 +1,7 @@
-<?php
-    // $mysqli = new mysqli("hostname", "username", "password", "database_name");
-    // if (!mysqli->connect) {
-    //     die("Connection failed: " . mysqli_connect_error());
-    // }
-?>
 
   <?php
-    if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST)){
-      $name = (isset($_POST['name']) && is_string($_POST['name']) && strlen(trim($_POST['name'])) > 0 && strlen(trim($_POST['name'])) < 100) ? $_POST['name'] : false;
-      $email = (isset($_POST['email']) && is_string($_POST['email']) && strlen(trim($_POST['email'])) > 0 && strlen(trim($_POST['email'])) < 100) ? $_POST['email'] : false;
-      $phone = (isset($_POST['phone']) && is_string($_POST['phone']) && strlen(trim($_POST['phone'])) > 0 && strlen(trim($_POST['phone'])) < 100) ? $_POST['phone'] : false;
-      $state = (isset($_POST['state']) && is_string($_POST['state']) && strlen(trim($_POST['state'])) > 0 && strlen(trim($_POST['state'])) < 100) ? $_POST['state'] : false;
-      $city = (isset($_POST['city']) && is_string($_POST['city']) && strlen(trim($_POST['city'])) > 0 && strlen(trim($_POST['city'])) < 100) ? $_POST['city'] : false;
-      $pincode = (isset($_POST['pincode']) && is_string($_POST['pincode']) && strlen(trim($_POST['pincode'])) > 0 && strlen(trim($_POST['pincode'])) < 100) ? $_POST['pincode'] : false;
-      $address = (isset($_POST['address']) && is_string($_POST['address']) && strlen(trim($_POST['address'])) > 0 && strlen(trim($_POST['address'])) < 100) ? $_POST['address'] : false;
-    }
+      require('./env.php');
+      require('./connection.php');
   ?>
   <!DOCTYPE html>
   <html lang="en">
@@ -59,7 +46,7 @@
             <!--  ancher is for navigating different section of the page for later use-->
             <li><a href="#home">Home</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="#">Booking</a></li>
+            <li><a href="">Booking</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="nav-menu-btn">
@@ -69,34 +56,68 @@
       </nav>
 
       <?php
-        if($_SERVER['REQUEST_METHOD']==='POST' && isset($_POST)){
+        if($_SERVER['REQUEST_METHOD']==='POST'){
+
+          $name = (isset($_POST['name']) && is_string($_POST['name']) && strlen(trim($_POST['name'])) > 0 && strlen(trim($_POST['name'])) < 100) ? $_POST['name'] : "";
+          $email = (isset($_POST['email']) && is_string($_POST['email']) && strlen(trim($_POST['email'])) > 0 && strlen(trim($_POST['email'])) < 100) ? $_POST['email'] : "";
+          $phone = (isset($_POST['phone']) && is_string($_POST['phone']) && strlen(trim($_POST['phone'])) > 0 && strlen(trim($_POST['phone'])) < 100) ? $_POST['phone'] : "";
+          $state = (isset($_POST['state']) && is_string($_POST['state']) && strlen(trim($_POST['state'])) > 0 && strlen(trim($_POST['state'])) < 100) ? $_POST['state'] : "";
+          $city = (isset($_POST['city']) && is_string($_POST['city']) && strlen(trim($_POST['city'])) > 0 && strlen(trim($_POST['city'])) < 100) ? $_POST['city'] : "";
+          $pincode = (isset($_POST['pincode']) && is_string($_POST['pincode']) && strlen(trim($_POST['pincode'])) > 0 && strlen(trim($_POST['pincode'])) < 100) ? $_POST['pincode'] : "";
+          $address = (isset($_POST['address']) && is_string($_POST['address']) && strlen(trim($_POST['address'])) > 0 && strlen(trim($_POST['address'])) < 100) ? $_POST['address'] : "";
           if(true){
+
+            $merchantTransactionId='';
+            $merchantUserId='';
+            
+              //generate the merchantTransactionId
+            function generateRandomWord($length ) {
+                $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+                
+                $randomWord = '';
+                
+                for ($i = 0; $i < $length; $i++) {
+                    $randomWord .= $characters[rand(0, strlen($characters) - 1)];
+                }
+                return $randomWord;
+            }
+
+              $transactionId='';
+
+            $merchantTransactionId=generateRandomWord(20);
+            $merchantUserId=generateRandomWord(10);
+
+              //store the user data 
+              $sql="insert into user (name,email,phone,state,city,address,pincode,transactionId,merchantTransactionId,merchantUserId) VALUES (?, ?, ?, ?, ?, ?, ?, ?,?,?)";
+              $statement=$mysqli->prepare($sql);
+
+              $statement->bind_param("ssssssssss",$name,$email,$phone,$state,$city,$address,$pincode,$transactionId,$merchantTransactionId,$merchantUserId);
+
+
+              
+              $result=$statement->execute();
+
               $curl = curl_init();
 
-              $merchantId="MERCHANTUAT";
-              $merchantTransactionId="MT7850590068188104";
-              $merchantUserId="MUID123";
-
               $data= json_encode([
-                "merchantId"=> $merchantId,
-                "merchantTransactionId"=>$merchantTransactionId,
+                "merchantId"=> $GLOBALS['merchantId'],
+                "merchantTransactionId"=>$GLOBALS['merchantTransactionId'],
                 "merchantUserId"=>$merchantUserId,
-                "amount"=>10000,
-                "redirectUrl"=>"http://localhost/gladwheel/index.php",
-                "redirectMode"=> "REDIRECT",
-                "callbackUrl"=>"http://localhost/gladwheel/index.php",
-                "mobileNumber"=> "9999999999",
+                "amount"=>10000*100,
+                "redirectUrl"=>$GLOBALS['baseUrl'].'/paymentprocess.php',
+                "redirectMode"=> "POST",
+                "callbackUrl"=>"",
+                "mobileNumber"=> $GLOBALS['mobileNumber'],
                 "paymentInstrument"=>[
                   "type"=> "PAY_PAGE",
                 ]
               ]);
 
-              
+       
+
               $payload=base64_encode($data);
-              // echo $payload;
-              $saltKey="099eb0cd-02cf-4e2a-8aca-3e6c6aff0399";
-              $saltIndex="1";
-              $checksum=hash('sha256',$payload."/pg/v1/pay".$saltKey)."###".$saltIndex;
+              
+              $checksum=hash('sha256',$payload."/pg/v1/pay".$GLOBALS['saltKey'])."###".$GLOBALS['saltIndex'];
               
               curl_setopt_array($curl, [
                   CURLOPT_URL => "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay",
@@ -127,7 +148,7 @@
               } 
               else {
                 $response=json_decode($response);
-                if($response->status===200 || $response->status===201){
+                if($response->success){
                   $responseData=$response->data;
                   $responseInstrument=$responseData->instrumentResponse;
                   $redirectInfo=$responseInstrument->redirectInfo;
@@ -137,7 +158,6 @@
                 }
                 else{
                   echo "<div class='formError'> ".$response->message." <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
-              
                 }
               }
 
@@ -147,110 +167,6 @@
           }
         }
       ?>
-
-
-    <?php
-      //     function checkPaymentStatus($transactionId){
-          
-      //           $checksum2=hash("sha256","/pg/v1/status/".$merchantId."/".$merchantTransactionId.$saltKey)."###".$saltIndex;
-  
-      //           curl_setopt_array($curl, [
-      //           CURLOPT_URL => "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/status/".$merchantId."/".$merchantTransactionId,
-      //           CURLOPT_RETURNTRANSFER => true,
-      //           CURLOPT_ENCODING => "",
-      //           CURLOPT_MAXREDIRS => 10,
-      //           CURLOPT_TIMEOUT => 30,
-      //           CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-      //           CURLOPT_CUSTOMREQUEST => "GET",
-      //           CURLOPT_HTTPHEADER => [
-      //               "Content-Type: application/json",
-      //               "X-VERIFY:".$checksum2,
-      //               "X-MERCHANT-ID:".$merchantId,
-      //               "accept: application/json"
-      //           ],
-      //           ]);
-  
-      //           $response = curl_exec($curl);
-      //           $err = curl_error($curl);
-  
-      //           curl_close($curl);
-  
-      //           if ($err) {
-      //               echo "<div class='formError'> ".$err." <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
-      //           } 
-      //           else {
-      //               $data=json_decode($response);
-      //               return $data->code;
-      //           }
-      //     }
-      // if(isset($_POST['merchantId']) && isset($_POST['transactionId']) ){
-      //   //check for the real-time status of the payment
-      //   $paymentStatus=checkPaymentStatus($_POST['transactionId']);
-
-      //   if($paymentStatus==='PAYMENT_SUCCESS'){
-      //     $sql="insert into buyers (name,email,phone,state,city,address,pincode,transactionId)";
-      //     $statement=$mysqli->prepare($sql);
-      //     $statement->bind_param("ssssssss",$name,$email,$phone,$state,$city,$address,$pincode,$transactionId);
-      //     $result=$statement->execute();
-      //      echo "<div class='formError'> Payment Successfully Received <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
-      //      return;
-      //   }
-
-
-      //   else if($paymentStatus==='PAYMENT_PENDING'){
-      //       $initialInterval = 20;
-      //       $totalTimeout = 900; //fifteen minutes
-
-      //       $endTime = time() + $totalTimeout;
-
-      //       while (time() < $endTime) {
-      
-      //           if ($paymentStatus !== "PAYMENT_PENDING") {
-      //               break;
-      //           }
-
-      //           if (time() - $initialInterval <= 25) {
-      //             sleep(3);
-      //             $paymentStatus=checkPaymentStatus($_POST['transactionId']);
-      //           } elseif (time() - $initialInterval <= 85) {
-      //             sleep(3);
-      //             $paymentStatus=checkPaymentStatus($_POST['transactionId']);
-      //           } elseif (time() - $initialInterval <= 145) {
-      //             sleep(6);
-      //             $paymentStatus=checkPaymentStatus($_POST['transactionId']);
-      //           } elseif (time() - $initialInterval <= 205) {
-      //             sleep(10);
-      //             $paymentStatus=checkPaymentStatus($_POST['transactionId']);
-      //           } else {
-      //             sleep(30);
-      //             $paymentStatus=checkPaymentStatus($_POST['transactionId']);
-      //           }
-      //       }
-
-            
-      //       if($paymentStatus==='PAYMENT_SUCCESS'){
-      //         $sql="insert into buyers (name,email,phone,state,city,address,pincode,transactionId)";
-      //         $statement=$mysqli->prepare($sql);
-      //         $statement->bind_param("ssssssss",$name,$email,$phone,$state,$city,$address,$pincode,$transactionId);
-      //         $result=$statement->execute();
-      //         echo "<div class='formError'> Payment Successfully Received <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
-      //         return;
-      //       }
-      //       else{
-      //         echo "<div class='formError'> ".$data->data->responseCodeDescription." if the amount has been debited it will be credited into you account within 2 or 3 days <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
-      //         return;
-      //       }
-      //   }
-
-      //   else{
-      //     echo "<div class='formError'> ".$data->data->responseCodeDescription." <i class='fa-solid fa-xmark formError-close-btn' ></i> </div>";
-      //     return;
-      //   }
-      // }
-    ?>
-
-
-
 
       <div class="main" id="home">
 
