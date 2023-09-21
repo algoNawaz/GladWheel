@@ -46,7 +46,7 @@
             <!--  ancher is for navigating different section of the page for later use-->
             <li><a href="#home">Home</a></li>
             <li><a href="#faq">FAQ</a></li>
-            <li><a href="">Booking</a></li>
+            <li><a href="#booking">Booking</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="nav-menu-btn">
@@ -337,7 +337,7 @@
         </div>
 
 
-        <div class="payment-section">
+        <div class="payment-section" id="booking">
           <div class="price-section">
               <h1>Price</h1>
               <h1>INR 50,0000</h1>
