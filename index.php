@@ -3,6 +3,7 @@
       require('./env.php');
       require('./connection.php');
   ?>
+
   <!DOCTYPE html>
   <html lang="en">
     <head>
@@ -39,7 +40,7 @@
       <nav>
         <div class="container" >
           <div class="logo">
-            <img src="WhatsApp Image 2023-09-08 at 15.54.36.jpg" alt="LOGO" />
+            <img src="LOGO 2_page-0001.jpg" alt="LOGO" />
           </div>
           <ul class="nav-links">
             <i class="fa-solid fa-xmark nav-menu-close-btn" ></i>
@@ -65,7 +66,7 @@
           $city = (isset($_POST['city']) && is_string($_POST['city']) && strlen(trim($_POST['city'])) > 0 && strlen(trim($_POST['city'])) < 100) ? $_POST['city'] : "";
           $pincode = (isset($_POST['pincode']) && is_string($_POST['pincode']) && strlen(trim($_POST['pincode'])) > 0 && strlen(trim($_POST['pincode'])) < 100) ? $_POST['pincode'] : "";
           $address = (isset($_POST['address']) && is_string($_POST['address']) && strlen(trim($_POST['address'])) > 0 && strlen(trim($_POST['address'])) < 100) ? $_POST['address'] : "";
-          if(true){
+          if($name && $email && $phone && $state && $city && $pincode && $address){
 
             $merchantTransactionId='';
             $merchantUserId='';
@@ -173,13 +174,13 @@
         <div class="product-section">
           <div class="title">
             <div class="words">
-              <span>Clip on kit</span>
-              <span>Great Product</span>
+              <span>welcome to wheelease solution</span>
+              <span>where mobility knows no bond.</span>
 
             </div>
           </div>
           <div class="main-product-img">
-            <img src="rio_firefly_2.51_side_gry_1_768x768.png" alt="" />
+            <img src="mainimg.jpg" alt="" />
           </div>
         </div>
 
@@ -215,6 +216,66 @@
           </div>
         </div>
     
+
+        <div class="payment-section" id="booking">
+        <div class="fomo">
+            <div class="tag-line">
+              <h1>LIMITED STOCK</h1>
+            </div>
+            <div class="tag-line">
+              <H1>EMI AVAIABLE</H1>
+            </div>
+            <div class="tag-line">
+              <h1>10% EXCLUSIVE OFFER</h1>
+            </div>
+            <div class="tag-line">
+              <h1>DIWALI SPECIAL DISCOUNT</h1>
+            </div>
+            <div class="tag-line">
+              <H1>LEAST PRICE IN THE MARKET</H1>
+            </div>
+          </div>
+          <div class="user-form">
+            <form action="#" method="post">
+                <div class="input-wrapper">
+                  <label for="name">Full Name</label>
+                  <input type="text" name="name" id="name" >
+                </div>
+                <div class="input-wrapper">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" >
+                </div>
+                <div class="input-wrapper">
+                  <label for="phone">Phone</label>
+                  <input type="text" name="phone" id="email" >
+                </div>
+                        
+                <div class="input-wrapper">
+                  <label for="address">Address</label>
+                  <input type="text" name="address" id="address">
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="city">City</label>
+                  <input type="text" name="city" id="city">
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="state">State</label>
+                  <input type="text" name="state" id="state">
+                </div>
+
+                <div class="input-wrapper">
+                  <label for="pincode">PinCode</label>
+                  <input type="text" name="pincode" id="pincode">
+                </div>
+                <div class="input-wrapper">
+                  <button type="submit">PreOrder @10,000</button>
+                </div>
+            </form> 
+          </div>
+        </div>
+
         <!-- team section -->
       <div class="team">
         <h1>OUR TEAM</h1>
@@ -304,86 +365,56 @@
         </div>
 
 
+
+
         <div class="faq-section" id="faq">
           <h2>FAQ</h2>
           <div class="ques">
             <li>
-              <span>Lorem ipsum dolor sit amet.</span>
+              <span>Can I drive clip ease without driving lincence?.</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>answer</li>
+            <li>Yes you can drive clip ease without lincence because its speed is 25kmph.</li>
           </div>
           <div class="ques">
             <li>
-              <span>Lorem ipsum dolor sit amet.</span>
+              <span>Can I drive clip ease at night?.</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>answer</li>
+            <li>Yes you can drive clip ease at night because it has dual headlight setup for better visibility at night.</li>
           </div>
           <div class="ques">
             <li>
-              <span>Lorem ipsum dolor sit amet.</span>
+              <span>Can I go reverse in clip ease?</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>answer</li>
+            <li>Yes you have a dedicated button to shift the driving mode. </li>
           </div>
           <div class="ques">
             <li>
-              <span>Lorem ipsum dolor sit amet.</span>
+              <span>How much distance can I cover in one charge?</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>answer</li>
+            <li>You can go 25km in single charge.</li>
+          </div>
+          <div class="ques">
+            <li>
+              <span>Do I get any warranty of clip ease</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li>Yes you have one year warranty.</li>
+          </div>
+          <div class="ques">
+            <li>
+              <span>Can I pay in installments?</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </li>
+            <li>Yes you can pay in installments.</li>
           </div>
         </div>
 
 
-        <div class="payment-section" id="booking">
-          <div class="price-section">
-              <h1>Price</h1>
-              <h1>INR 50,0000</h1>
-              <p>Pay INR to preorder your product</p>
-              <p>The product will be dispatched within 2 months</p>
-          </div>
-          <div class="user-form">
-            <form action="#" method="post">
-                <div class="input-wrapper">
-                  <label for="name">Full Name</label>
-                  <input type="text" name="name" id="name" >
-                </div>
-                <div class="input-wrapper">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" >
-                </div>
-                <div class="input-wrapper">
-                  <label for="phone">Phone</label>
-                  <input type="text" name="phone" id="email" >
-                </div>
-                        
-                <div class="input-wrapper">
-                  <label for="address">Address</label>
-                  <input type="text" name="address" id="address">
-                </div>
 
-                <div class="input-wrapper">
-                  <label for="city">City</label>
-                  <input type="text" name="city" id="city">
-                </div>
-
-                <div class="input-wrapper">
-                  <label for="state">State</label>
-                  <input type="text" name="state" id="state">
-                </div>
-
-                <div class="input-wrapper">
-                  <label for="pincode">PinCode</label>
-                  <input type="text" name="pincode" id="pincode">
-                </div>
-                <div class="input-wrapper">
-                  <button type="submit">PreOrder @10,000</button>
-                </div>
-            </form> 
-          </div>
-        </div>
 
       </div>
 

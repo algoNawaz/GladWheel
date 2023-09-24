@@ -4,4 +4,6 @@
   $saltIndex="1";
   $mobileNumber="9999999999";
   $baseUrl="http://localhost/gladwheel";
+  // $baseUrl="http://143.110.182.55";
+
 ?>
