@@ -215,25 +215,48 @@
             <img src="rio_firefly_2.51_side_gry_1_768x768.png" alt="" />
           </div>
         </div>
+
+        <div class="product-feature">
+          <div class="heading">
+            <h1>
+              With best selling pricing in the entire market
+            </h1>
+          </div>
+          <div class="description">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, asperiores!
+            </p>
+          </div>
+          <div class="product-image">
+            <img src="rio_firefly_2.51_side_gry_1_768x768.png" alt="" />
+          </div>
+        </div>
+
+        <div class="product-feature">
+          <div class="heading">
+            <h1>
+              With best selling pricing in the entire market
+            </h1>
+          </div>
+          <div class="description">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, asperiores!
+            </p>
+          </div>
+          <div class="product-image">
+            <img src="rio_firefly_2.51_side_gry_1_768x768.png" alt="" />
+          </div>
+        </div>
+
+
     
 
         <div class="payment-section" id="booking">
-        <div class="fomo">
-            <div class="tag-line">
-              <h1>LIMITED STOCK</h1>
-            </div>
-            <div class="tag-line">
-              <H1>EMI AVAIABLE</H1>
-            </div>
-            <div class="tag-line">
-              <h1>10% EXCLUSIVE OFFER</h1>
-            </div>
-            <div class="tag-line">
-              <h1>DIWALI SPECIAL DISCOUNT</h1>
-            </div>
-            <div class="tag-line">
-              <H1>LEAST PRICE IN THE MARKET</H1>
-            </div>
+           <div class="price-section">
+              <h1>Price</h1>
+              <h1>INR 50,0000</h1>
+              <p>Pay INR to preorder your product</p>
+              <p>The product will be dispatched within 2 months</p>
           </div>
           <div class="user-form">
             <form action="#" method="post">
@@ -277,34 +300,56 @@
         </div>
 
         <!-- team section -->
-      <div class="team">
+        <div class="team-head">
         <h1>OUR TEAM</h1>
-        <div class="team-section">
-          <div class="profile-card">
-            <img src="taha.jpg" alt="">
-            <h4>Taha Nafis</h4>
-          <p>i love technology and people related to it.</p>
-        </div>
-        <div class="profile-card">
-          <img src="maqool.jpg" alt="">
-          <h4>Taha Nafis</h4>
-          <p>i love technology and people related to it.</p>
-        </div>
+      </div>
+      <div class="team">
         <div class="profile-card">
           <img src="taha.jpg" alt="">
-          <h4>Taha Nafis</h4>
-          <p>i love technology and people related to it.</p>
-        </div>
+          <h2>FAISAL ASHRAF NOMANI</h2>
+          <p>Role: CEO</p>
+          <div class="profile-details">
+            <p>I'm Faisal, a passionate advocate for inclusivity and social change. I wear many hats – from being a 'bike tinkerer' to a dedicated field researcher, employment counselor, disability rights activist, sit-down comedian, and speaker. I take immense pride in having facilitated employment opportunities for approximately 500 People with Disabilities (PwDs) across various sectors, thus positively impacting their lives. My dedication hasn't gone unnoticed. I was honored to receive the prestigious Helen Keller Award in 2022 from NCPEDP for my unwavering support in increasing employment opportunities for PwDs. My mission is clear: creating inclusive workplaces and empowering individuals with diverse abilities to not just find jobs, but to thrive in their careers. Join me on this journey towards a more inclusive and equitable world. Together, we can make a meaningful difference</p>  
+          </div>
+          <button class="show-more">Show More</button>
+       </div>
         <div class="profile-card">
           <img src="maqool.jpg" alt="">
-          <h4>Taha Nafis</h4>
-          <p>i love technology and people related to it.</p>
-        </div>
+          <h2>MAQOOL SAIFI</h2>
+          <p>Role: CEO</p>
+          <div class="profile-details">
+            <p>I'm Maqool Saifi, a software engineer with a penchant for designing and fabricating life-enhancing products. In 2023, I embarked on a journey as a YouTuber, sharing my passion for innovation. But my commitment goes beyond that; since 2022, I've been actively involved in the disability sector. Recognizing the unique challenges faced by individuals with disabilities, I joined forces with a diverse team, including wheelchair users, to launch Wheelease Solutions, a startup dedicated to enhancing the mobility of wheelchair users. We've recently pitched our innovative product at DIC Meet 2023, driven by our mission to improve the lives of those with disabilities through thoughtful and impactful solutions.</p>  
+          </div>
+          <button class="show-more">Show More</button>
+       </div>
         <div class="profile-card">
           <img src="taha.jpg" alt="">
-          <h4>Taha Nafis</h4>
-          <p>i love technology and people related to it.</p>
-        </div>
+          <h2>TAHA NAFEES</h2>
+          <p>Role: CEO</p>
+          <div class="profile-details">
+            <p>I'm Taha Nafees, a dedicated software engineer with a passion for inclusivity. Alongside my tech career, I run a YouTube channel called "Dare with Gear." Since 2018, I've been deeply involved in the disability sector. I've had the privilege of working with a diverse team, including wheelchair users and IITians. Together, we designed a groundbreaking reverse trike kit to enhance mobility for people with disabilities, surpassing side-wheel attachments for bikes. We proudly secured the 4th rank in India at the Red Brick Summit at IIM Ahmedabad. We also presented our kit at the prestigious TiE Global Summit at Taj Palace, Delhi, and at the DIC Meet 2023. In addition, we've developed electric carts as a dual-purpose solution, addressing mobility challenges and creating employment opportunities for individuals with disabilities.I am committed to making a lasting impact in the field of accessibility and mobility</p>  
+          </div>
+          <button class="show-more">Show More</button>
+       </div>
+        <div class="profile-card">
+          <img src="maqool.jpg" alt="">
+          <h2>FAISAL ASHRAF NOMANI</h2>
+          <p>Role: CEO</p>
+          <div class="profile-details">
+            <p>I'm Faisal, a passionate advocate for inclusivity and social change. I wear many hats – from being a 'bike tinkerer' to a dedicated field researcher, employment counselor, disability rights activist, sit-down comedian, and speaker. I take immense pride in having facilitated employment opportunities for approximately 500 People with Disabilities (PwDs) across various sectors, thus positively impacting their lives. My dedication hasn't gone unnoticed. I was honored to receive the prestigious Helen Keller Award in 2022 from NCPEDP for my unwavering support in increasing employment opportunities for PwDs. My mission is clear: creating inclusive workplaces and empowering individuals with diverse abilities to not just find jobs, but to thrive in their careers. Join me on this journey towards a more inclusive and equitable world. Together, we can make a meaningful difference</p>  
+          </div>
+          <button class="show-more">Show More</button>
+       </div>
+        <div class="profile-card">
+          <img src="taha.jpg" alt="">
+          <h2>AYAN BAIG</h2>
+          <p>Role: CEO</p>
+          <div class="profile-details">
+            <p>I'm Ayan Baig, a final-year computer engineering student, and a disability sector enthusiast since the age of 14. My focus lies in enhancing the mobility of wheelchair users in India. Collaborating with a diverse team of IT professionals and wheelchair users, we developed a transformative reverse trike kit to address mobility challenges faced by disabled bike riders. Our innovation garnered recognition at esteemed platforms such as the Red Brick Summit and TiE Global Summit, earning us a notable 4th place at the former. Additionally, I clinched the 1st position at the DIICE AKAM contest, a sustainable business ideathon, and the Dr. B.R Ambedkar university. Currently, I co-manage a startup dedicated to improving wheelchair riding through a clip-on kit, while also running a YouTube channel, "Dare with Gear." My journey is defined by a steadfast commitment to empower individuals with disabilities and pioneer innovative solutions for enhanced mobility and inclusivity.</p>  
+          </div>
+          <button class="show-more">Show More</button>
+       </div>
+        
 
       </div>
     </div>
@@ -543,6 +588,19 @@
             formCloseBtn.parentElement.style.display="none";
           })
         }
+
+        //team section js
+        document.addEventListener('DOMContentLoaded', function() {
+            const showMoreButtons = document.querySelectorAll('.show-more');
+  
+            showMoreButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const profileDetails = this.parentElement.querySelector('.profile-details');
+                    profileDetails.style.display = profileDetails.style.display === 'none' ? 'block' : 'none';
+                    this.textContent = profileDetails.style.display === 'none' ? 'Show More' : 'Show Less';
+                });
+            });
+        });
 
       </script>
     </body>
