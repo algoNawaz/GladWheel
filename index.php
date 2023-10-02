@@ -13,7 +13,7 @@
       <link
         rel="icon"
         type="image/x-icon"
-        href="WhatsApp Image 2023-09-08 at 15.54.36.jpg"
+        href="logoFinal.png"
       />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,13 +34,13 @@
         href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
       />
 
-      <title>GladWheel</title>
+      <title>Clip-Ease</title>
     </head>
     <body>
       <nav>
         <div class="container" >
           <div class="logo">
-            <img src="LOGO 2_page-0001.jpg" alt="LOGO" />
+            <img src="logoFinal.png" alt="LOGO" />
           </div>
           <ul class="nav-links">
             <i class="fa-solid fa-xmark nav-menu-close-btn" ></i>
@@ -180,84 +180,133 @@
             </div>
           </div>
           <div class="main-product-img">
-            <img src="mainimg.jpg" alt="" />
+            <img src="mainimage.png" alt="" />
           </div>
+      
+        </div>
+
+        <div class="product-des">
+          <p>
+          we're dedicated to enhancing the mobility of wheelchair users. Our clip-ease  provide freedom, independence, and accessibility. Discover how we can empower you on your journey to greater mobility.
+          ~ <strong>Team Clip-Ease.</strong>
+          </p>
         </div>
 
         <div class="product-feature">
+          <div class="product-image">
+            <img src="FF_2.5_m_blk_sl_side_768x768_clipdrop-enhance.png" alt="" />
+          </div>
           <div class="heading">
-            <h1>
-              Now get universal clip on kit which fits on all wheelchair
-            </h1>
+            <h2>
+             Elevating Dignity Through Thoughtful Design.
+            </h2>
           </div>
           <div class="description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, asperiores!
+            Our product is your ticket to empowerment, boosting confidence, and preserving dignity, all while you ride with grace and independence. Designed with care, it's more than just mobility; it's a testament to your strength and resilience. Experience the freedom you deserve with our thoughtfully crafted solution
             </p>
-          </div>
-          <div class="product-image">
-            <img src="FF_2.5_m_blk_sl_side_768x768_clipdrop-enhance.png" alt="" />
           </div>
         </div>
         
         <div class="product-feature">
+          <div class="product-image">
+            <img src="rio_firefly_2.5_side_gry_1_768x768.png" alt="" />
+          </div>
           <div class="heading">
-            <h1>
-              With best selling pricing in the entire market
-            </h1>
+            <h2>
+              Unlock a wide range of wheelchair options with our universal design
+            </h2>
           </div>
           <div class="description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, asperiores!
+            We've meticulously designed our clip-on kit to offer compatibility with a wider range of wheelchairs, providing you the freedom to choose your type of wheelchair while still enjoying the benefits of our product
             </p>
-          </div>
-          <div class="product-image">
-            <img src="rio_firefly_2.51_side_gry_1_768x768.png" alt="" />
           </div>
         </div>
 
         <div class="product-feature">
+          <div class="product-image">
+            <img src="battery.png" alt="" />
+          </div>
           <div class="heading">
-            <h1>
-              With best selling pricing in the entire market
-            </h1>
+            <h2>
+            Power That Lasts: Uninterrupted Mobility for Longer Journeys
+            </h2>
           </div>
           <div class="description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, asperiores!
+            Experience long lasting mobility with our product, featuring a robust 36V 10Ah battery. Enjoy extended journeys and boost your productivity, knowing you have power that lasts. Make the most of every moment with our long-lasting battery.
             </p>
-          </div>
-          <div class="product-image">
-            <img src="rio_firefly_2.51_side_gry_1_768x768.png" alt="" />
           </div>
         </div>
 
         <div class="product-feature">
+          <div class="product-image">
+            <img src="headlight.png" alt="" />
+          </div>
           <div class="heading">
-            <h1>
-              With best selling pricing in the entire market
-            </h1>
+            <h2>
+              Dual headlights to illuminate your journey to success
+            </h2>
           </div>
           <div class="description">
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, asperiores!
+            Our clip-on kit features dual headlights, ensuring safety and symbolizing your focused journey to success. These headlights illuminate your path, making each step toward your goals clear and secure.
             </p>
-          </div>
-          <div class="product-image">
-            <img src="rio_firefly_2.51_side_gry_1_768x768.png" alt="" />
           </div>
         </div>
 
-
-    
+        <div class="product-feature">
+          <div class="product-image">
+            <img src="lightWeight.webp" alt="" />
+          </div>
+          <div class="heading">
+            <h2>
+             Carry Freedom, Not Weight: Where Light Meets Might
+            </h2>
+          </div>
+          <div class="description">
+            <p>
+            we've crafted a clip-on kit that defies gravity, allowing you to carry freedom, not weight. Our innovative lightweight system makes each journey effortless, so you can glide through life unburdened and empowered
+            </p>
+          </div>
+        </div>
 
         <div class="payment-section" id="booking">
-           <div class="price-section">
-              <h1>Price</h1>
-              <h1>INR 50,0000</h1>
-              <p>Pay INR to preorder your product</p>
-              <p>The product will be dispatched within 2 months</p>
-          </div>
+           <div class="price-section"> 
+                <div class="text-section">
+                    <h1>INR 40,000</h1>
+                    <p>Delivery will commence in December. You can book it for only 499 rupees, and limited stocks are available. The full booking amount will be refunded if you cancel the booking.
+                    </p>
+                </div>
+            
+                <div class="badge-box">
+                    <div class="badges">
+                        <img src="emi.jpg" alt="">
+                        <p>EMI Available</p>
+                    </div>
+                    <div class="badges">
+                        <img src="limited stock.webp" alt="">
+                        <p>Limited Stock</p>
+                    </div>
+                    <div class="badges">
+                        <img src="support.jpg" alt="">
+                        <p>24/7 Support</p>       
+                    </div>
+                    <div class="badges">
+                        <img src="warranty.jpg" alt="">
+                        <p>Warranty</p> 
+                    </div>
+                    <div class="badges">
+                        <img src="moneyback.jpg" alt="">
+                        <p>Guarantee</p> 
+                    </div>
+                    <div class="badges">
+                        <img src="warranty.jpg" alt="">
+                        <p>Warranty</p> 
+                    </div>
+                </div> 
+          </div> 
           <div class="user-form">
             <form action="#" method="post">
                 <div class="input-wrapper">
@@ -293,7 +342,7 @@
                   <input type="text" name="pincode" id="pincode">
                 </div>
                 <div class="input-wrapper">
-                  <button type="submit">PreOrder @10,000</button>
+                  <button type="submit">Book @499</button>
                 </div>
             </form> 
           </div>
@@ -305,47 +354,47 @@
       </div>
       <div class="team">
         <div class="profile-card">
-          <img src="taha.jpg" alt="">
+          <img src="faisal.jpg" alt="">
           <h2>FAISAL ASHRAF NOMANI</h2>
-          <p>Role: CEO</p>
+          <p>Role: Co-founder</p>
           <div class="profile-details">
-            <p>I'm Faisal, a passionate advocate for inclusivity and social change. I wear many hats – from being a 'bike tinkerer' to a dedicated field researcher, employment counselor, disability rights activist, sit-down comedian, and speaker. I take immense pride in having facilitated employment opportunities for approximately 500 People with Disabilities (PwDs) across various sectors, thus positively impacting their lives. My dedication hasn't gone unnoticed. I was honored to receive the prestigious Helen Keller Award in 2022 from NCPEDP for my unwavering support in increasing employment opportunities for PwDs. My mission is clear: creating inclusive workplaces and empowering individuals with diverse abilities to not just find jobs, but to thrive in their careers. Join me on this journey towards a more inclusive and equitable world. Together, we can make a meaningful difference</p>  
+            <p>I'm Faisal, a versatile advocate for inclusivity, employment for Persons with Disabilities, and social change. I received the Helen Keller Award in 2022 for my work in this field.</p>  
           </div>
           <button class="show-more">Show More</button>
        </div>
         <div class="profile-card">
-          <img src="maqool.jpg" alt="">
+          <img src="maqoolFinal.png" alt="">
           <h2>MAQOOL SAIFI</h2>
-          <p>Role: CEO</p>
+          <p>Role: Co-founder</p>
           <div class="profile-details">
-            <p>I'm Maqool Saifi, a software engineer with a penchant for designing and fabricating life-enhancing products. In 2023, I embarked on a journey as a YouTuber, sharing my passion for innovation. But my commitment goes beyond that; since 2022, I've been actively involved in the disability sector. Recognizing the unique challenges faced by individuals with disabilities, I joined forces with a diverse team, including wheelchair users, to launch Wheelease Solutions, a startup dedicated to enhancing the mobility of wheelchair users. We've recently pitched our innovative product at DIC Meet 2023, driven by our mission to improve the lives of those with disabilities through thoughtful and impactful solutions.</p>  
+            <p>I'm Maqool Saifi, a software engineer dedicated to enhancing mobility for wheelchair users through Wheelease Solutions, co-founded in 2023. also a creator of youtube channel named dare with gear.</p>  
           </div>
           <button class="show-more">Show More</button>
        </div>
         <div class="profile-card">
-          <img src="taha.jpg" alt="">
+          <img src="Taha002.jpg" alt="">
           <h2>TAHA NAFEES</h2>
-          <p>Role: CEO</p>
+          <p>Role: Co-founder </p>
           <div class="profile-details">
-            <p>I'm Taha Nafees, a dedicated software engineer with a passion for inclusivity. Alongside my tech career, I run a YouTube channel called "Dare with Gear." Since 2018, I've been deeply involved in the disability sector. I've had the privilege of working with a diverse team, including wheelchair users and IITians. Together, we designed a groundbreaking reverse trike kit to enhance mobility for people with disabilities, surpassing side-wheel attachments for bikes. We proudly secured the 4th rank in India at the Red Brick Summit at IIM Ahmedabad. We also presented our kit at the prestigious TiE Global Summit at Taj Palace, Delhi, and at the DIC Meet 2023. In addition, we've developed electric carts as a dual-purpose solution, addressing mobility challenges and creating employment opportunities for individuals with disabilities.I am committed to making a lasting impact in the field of accessibility and mobility</p>  
+            <p>I'm Taha Nafees, a software engineer and "Dare with Gear" YouTube channel creator. I've developed innovative mobility solutions to enhance accessibility for individuals with disabilities, focusing on inclusivity.</p>  
           </div>
           <button class="show-more">Show More</button>
        </div>
         <div class="profile-card">
-          <img src="maqool.jpg" alt="">
-          <h2>FAISAL ASHRAF NOMANI</h2>
-          <p>Role: CEO</p>
+          <img src="Rohit.jpg" alt="">
+          <h2>ROHIT</h2>
+          <p>Role: Co-founder</p>
           <div class="profile-details">
-            <p>I'm Faisal, a passionate advocate for inclusivity and social change. I wear many hats – from being a 'bike tinkerer' to a dedicated field researcher, employment counselor, disability rights activist, sit-down comedian, and speaker. I take immense pride in having facilitated employment opportunities for approximately 500 People with Disabilities (PwDs) across various sectors, thus positively impacting their lives. My dedication hasn't gone unnoticed. I was honored to receive the prestigious Helen Keller Award in 2022 from NCPEDP for my unwavering support in increasing employment opportunities for PwDs. My mission is clear: creating inclusive workplaces and empowering individuals with diverse abilities to not just find jobs, but to thrive in their careers. Join me on this journey towards a more inclusive and equitable world. Together, we can make a meaningful difference</p>  
+            <p>Hello, I'm Rohit, a dedicated mechanical design engineer with a strong passion for tinkering with machinery and creating innovative solutions to everyday challenges. I earned my degree from IIT Delhi in 2018 and played a pivotal role in the design and development of a cutting-edge smart home gym machine called Aroleap.</p>  
           </div>
           <button class="show-more">Show More</button>
        </div>
         <div class="profile-card">
-          <img src="taha.jpg" alt="">
+          <img src="ayan.jpg" alt="">
           <h2>AYAN BAIG</h2>
-          <p>Role: CEO</p>
+          <p>Role: Co-founder</p>
           <div class="profile-details">
-            <p>I'm Ayan Baig, a final-year computer engineering student, and a disability sector enthusiast since the age of 14. My focus lies in enhancing the mobility of wheelchair users in India. Collaborating with a diverse team of IT professionals and wheelchair users, we developed a transformative reverse trike kit to address mobility challenges faced by disabled bike riders. Our innovation garnered recognition at esteemed platforms such as the Red Brick Summit and TiE Global Summit, earning us a notable 4th place at the former. Additionally, I clinched the 1st position at the DIICE AKAM contest, a sustainable business ideathon, and the Dr. B.R Ambedkar university. Currently, I co-manage a startup dedicated to improving wheelchair riding through a clip-on kit, while also running a YouTube channel, "Dare with Gear." My journey is defined by a steadfast commitment to empower individuals with disabilities and pioneer innovative solutions for enhanced mobility and inclusivity.</p>  
+            <p>I'm Ayan Baig, a computer engineering student passionate about improving wheelchair mobility in India through innovative trike solutions. I run the YouTube channel "Dare with Gear" and am dedicated to empowering individuals with disabilities.</p>  
           </div>
           <button class="show-more">Show More</button>
        </div>
@@ -358,7 +407,7 @@
           <div class="content swiper-wrapper">
             <div class="swiper-slide card">
               <div class="card-content">
-                <img src="taha.jpg" alt="" />
+                <img src="Taha002.jpg" alt="" />
                 <div class="description">
                   Highly Recommended.
                 </div>
@@ -388,7 +437,7 @@
             </div>
             <div class="swiper-slide card">
               <div class="card-content">
-                <img src="maqool.jpg" alt="" />
+                <img src="maqoolFinal.png" alt="" />
                 <div class="description">
                   Smooth and effortless system.
                 </div>
@@ -419,47 +468,44 @@
               <span>Can I drive clip ease without driving lincence?.</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>Yes you can drive clip ease without lincence because its speed is 25kmph.</li>
+            <li> <strong>Ans:</strong> Yes you can drive clip ease without lincence because its speed is 25kmph.</li>
           </div>
           <div class="ques">
             <li>
               <span>Can I drive clip ease at night?.</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>Yes you can drive clip ease at night because it has dual headlight setup for better visibility at night.</li>
+            <li> <strong>Ans:</strong> Yes you can drive clip ease at night because it has dual headlight setup for better visibility at night.</li>
           </div>
           <div class="ques">
             <li>
               <span>Can I go reverse in clip ease?</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>Yes you have a dedicated button to shift the driving mode. </li>
+            <li> <strong>Ans:</strong> Yes you have a dedicated button to shift the driving mode. </li>
           </div>
           <div class="ques">
             <li>
               <span>How much distance can I cover in one charge?</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>You can go 25km in single charge.</li>
+            <li> <strong>Ans:</strong> You can go 25km in single charge.</li>
           </div>
           <div class="ques">
             <li>
               <span>Do I get any warranty of clip ease</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>Yes you have one year warranty.</li>
+            <li> <strong>Ans:</strong> Yes you have one year warranty.</li>
           </div>
           <div class="ques">
             <li>
               <span>Can I pay in installments?</span>
               <i class="fa-solid fa-angle-down"></i>
             </li>
-            <li>Yes you can pay in installments.</li>
+            <li> <strong>Ans:</strong> Yes you can pay in installments.</li>
           </div>
         </div>
-
-
-
 
       </div>
 
@@ -468,7 +514,7 @@
       <footer id="contact">
         <div class="footer-upward-section">
           <div class="logo">
-            <img src="WhatsApp Image 2023-09-08 at 15.54.36.jpg" alt="">
+            <img src="logoFinal.png" alt="">
           </div>  
           <div class="follow-btn">
             <p>Follow us</p>
@@ -479,18 +525,27 @@
               <a href="">
                 <i class="fa-brands fa-twitter"></i>
               </a>
+              <a href="">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://instagram.com/darewithgear__?igshid=NjIwNzIyMDk2Mg==" target="_blank" >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://youtube.com/@darewithgear?si=ZHzOKRq8WDEr8TcS" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
             </div>
           </div>
           <div class="contact-us">
             <p>contact us</p>
-            <p class="phone">+91 99298349</p>
-            <p class="email">gladwheel@gmail.com</p>
+            <p class="phone">+91-7838968499</p>
+            <p class="email">wheeleasesolutions@gmail.com</p>
           </div>
         </div>
       
         <div class="footer-downward-section">
           <div class="copyright">
-            <p>All copy rights reserved. Glad Wheel</p>
+            <p>All copy rights reserved. Clip-ease</p>
           </div>
           <div class="terms-condition">
             <p>Terms and Conditions</p>
@@ -581,7 +636,6 @@
 
 
         //form error close btn
-
         const formCloseBtn=document.querySelector('.formError-close-btn');
         if(formCloseBtn){
           formCloseBtn.addEventListener('click',()=>{
